@@ -15,7 +15,11 @@ int (*_print_form(const char *format))(va_list)
 		{"s", print_s},
 		{"d", print_d},
 		{"i", print_d},
+		{"b", print_b},
 		{"u", print_unsigned},
+		{"o", print_oct},
+		{"x", print_x},
+		{"X", print_X},
 		{"%", print_per},
 		{NULL, NULL}
 	};

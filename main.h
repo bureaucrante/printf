@@ -9,8 +9,12 @@ int _putchar(char c);
 int print_c(va_list ctype);
 int print_s(va_list stype);
 int print_d(va_list dtype);
+int print_b(va_list bargs);
 int print_unsigned(va_list utype);
 int print_per(va_list pertype);
+int print_oct(va_list octype);
+int print_x(va_list xargs);
+int print_X(va_list Xargs);
 int (*_print_form(const char *format))(va_list);
 
 /**

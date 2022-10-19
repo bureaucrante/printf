@@ -19,13 +19,11 @@ int _printf(const char *format, ...)
 		return (-1);
 	if (format[0] == '%' && format[1] == ' ' && !format[2])
 		return (-1);
-
 	while (format[i])
 	{
 		if (format[i] == '%')
 		{
 			i++;
-
 			f = _print_form(&format[i]);
 			if (f)
 			{
@@ -33,17 +31,20 @@ int _printf(const char *format, ...)
 				i += 1;
 				continue;
 			}
+			else if (f == NULL && format[i + 1] != ' ')
+			{
+				if (format[i + 1] != '\0')
+				{
+					count += _putchar(format[i - 1]);
+					continue;
+				}
+				else
+					return (-1);
+			}
 			i++;
-
-			if (format[i] != '\0')
-				if (format[i] == ' ')
-					_putchar(format[i]);
 		}
 		else
-		{
-			_putchar(format[i]);
-			count++;
-		}
+			count += _putchar(format[i]);
 		i++;
 	}
 	va_end(args);
