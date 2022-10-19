@@ -36,8 +36,8 @@ int print_b(va_list bargs)
 
 /**
  * print_oct - prints octal number
- * @octype:
- * @Return:
+ * @octype: octal argument to be printed.
+ * Return: number of printed chars.
  */
 
 int print_oct(va_list octype)
@@ -67,9 +67,10 @@ int print_oct(va_list octype)
 }
 
 /**
- * print_hex - 
- * @xtype:
- * @Return:
+ * print_hex - prints a hexadecimal number
+ * @n: number to be printed.
+ * @c: print case determiner.
+ * Return: number of printed chars.
  */
 
 int print_hex(unsigned int n, unsigned int c)
@@ -105,17 +106,21 @@ int print_hex(unsigned int n, unsigned int c)
 	return (count);
 }
 
+/**
+ * print_x - prints lowercase hexadecimals.
+ * @x: hexadecimal argument to be printed.
+ * Return: main printer function.
+ */
 int print_x(va_list x)
 {
 	return (print_hex(va_arg(x, unsigned int), 0));
 }
 
 /**
- *  * print_X - takes am unsigned int and prints it in uppercase hex notation
- *   * @X: unsigned int to print
- *    *
- *     * Return: number of digits printed
- *      */
+ * print_X - prints uppercase hexadecimals.
+ * @X: hex argument to be printed.
+ * Return: main printer function.
+ */
 int print_X(va_list X)
 {
 	return (print_hex(va_arg(X, unsigned int), 1));
