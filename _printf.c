@@ -36,12 +36,9 @@ int _printf(const char *format, ...)
 			i++;
 
 			if (format[i] != '\0')
-			{
 				if (format[i] == ' ')
 					_putchar(format[i]);
-			}
 		}
-
 		else
 		{
 			_putchar(format[i]);
