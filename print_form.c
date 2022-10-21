@@ -20,6 +20,7 @@ int (*_print_form(const char *format))(va_list)
 		{"o", print_oct},
 		{"x", print_x},
 		{"X", print_X},
+		{"S", print_S},
 		{"%", print_per},
 		{NULL, NULL}
 	};
