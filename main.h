@@ -15,6 +15,7 @@ int print_per(va_list pertype);
 int print_oct(va_list octype);
 int print_x(va_list xargs);
 int print_X(va_list Xargs);
+int print_S(va_list S);
 int (*_print_form(const char *format))(va_list);
 
 /**
